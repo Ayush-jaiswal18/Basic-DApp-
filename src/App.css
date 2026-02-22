@@ -144,3 +144,86 @@ body {
   color: #94a3b8;
   font-size: 13px;
 }
+
+/* Wallet adapter button override */
+.wallet-btn .wallet-adapter-button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.25);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.wallet-btn .wallet-adapter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(168,85,247,0.25);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 32px);
+    padding: 24px;
+    border-radius: 12px;
+  }
+  .title { font-size: 20px; }
+  .subtitle { font-size: 14px; }
+}
+
+/* Sign message component styles (refined) */
+.sign-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(99,102,241,0.06);
+}
+.sign-container .input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(2,6,23,0.6);
+  border: 1px solid rgba(51,65,85,0.6);
+  color: #e6eef8;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.sign-container .input::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+.sign-container .input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.12);
+  outline: none;
+}
+.sign-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.sign-btn:active { transform: translateY(0); }
+.sign-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(168,85,247,0.18);
+}
+
+@media (max-width: 480px) {
+  .sign-container { flex-direction: column; align-items: stretch; }
+  .sign-btn { width: 100%; min-width: 0; }
+}

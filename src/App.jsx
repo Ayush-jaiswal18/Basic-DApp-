@@ -10,6 +10,7 @@ import './App.css'
 import { RequestAirdrop } from './components/RequestAirdrop';
 import { ShowBalance } from './components/ShowBalance';
 import { SendTokens } from './components/SendTokens';
+import { SignMessage } from './components/SignMessage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <RequestAirdrop />
               <ShowBalance />
               <SendTokens />
+              <SignMessage />
 
             </div>
 
